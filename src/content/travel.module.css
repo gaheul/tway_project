@@ -1,0 +1,104 @@
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 610px;
+    background-color: #f3f3f3;
+    padding: 50px 0;
+    box-sizing: border-box;
+ 
+}
+
+.content_wrap h3{
+    font-size: 28px;
+    text-align: center;
+    
+}
+
+.content_wrap{
+    width: 1200px;
+}
+
+.content_menu{
+    width: 100%;
+    height:380px;
+    margin-top: 40px;
+    background-color: rgb(83, 23, 83);
+    box-sizing: border-box;
+    
+}
+
+
+.info_travel{
+    display: flex;
+    justify-content: space-around;
+
+    align-items: center;
+    height: 60px;
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a1a1a;
+    vertical-align: middle;
+    overflow: hidden;
+    line-height: 1.1;
+
+}
+
+.info_travel span{
+    
+    vertical-align: middle;
+
+
+    
+}
+
+.info_price{
+    clear: both;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.won{
+    display: inline-block;
+    margin: 12px 3px 0 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.price{
+    font-size: 30px;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-align: center;
+}
+
+.icon{
+    display: inline-block;
+    width: 70px;
+    height: 27px;
+    margin-top: 10px;
+    margin: 10px auto;
+    padding: 6px 9px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1a1a;
+    background-color: #ccc;
+    border-radius: 20px;
+    font-style: normal;
+}
+.arrow{
+    display: inline-block;
+    width: 25px;
+    height: 11px;
+    background: url('./images/location_arrow.png') no-repeat 100% 50%;
+    vertical-align: middle;
+}
+
+
+
