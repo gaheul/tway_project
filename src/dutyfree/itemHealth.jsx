@@ -8,7 +8,7 @@ function ItemList({items}){
     
 
     return(
-     <div>    
+     <div className={styles.item}>    
          <div className={styles.product}>
             <div className={styles.item_img}>
                 <div><img src={items.img} alt="" /></div>

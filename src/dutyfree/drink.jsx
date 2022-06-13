@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../footer";
 import styles from './dutyfree.module.css';
 
@@ -19,11 +20,11 @@ function Drink(){
                         </div>
                         <div className={styles.top_list}>
                             <ul>
-                                <li><a href="#">인기순</a></li>
-                                <li><a href="#">신상품순</a></li>
-                                <li><a href="#">할인율</a></li>
-                                <li><a href="#">낮은가격순</a></li>
-                                <li><a href="#">높은가격순</a></li>
+                                <li>인기순</li>
+                                <li>신상품순</li>
+                                <li>할인율</li>
+                                <li>낮은가격순</li>
+                                <li>높은가격순</li>
                             </ul>
                             <select name="number">
                                 <option value="20개씩">20개씩</option>
@@ -38,11 +39,11 @@ function Drink(){
                         </div>   
                     </div>
                     <div className={styles.num}>
-                        <a className={styles.num_prev_first} href="#"></a>
-                        <a className={styles.num_prev} href="#"></a>
-                        <a className={styles.on} href="#">1</a>
-                        <a className={styles.num_next} href="#"></a>
-                        <a className={styles.num_next_first} href="#"></a>
+                        <Link to='#' className={styles.num_prev_first} ></Link>
+                        <Link to='#' className={styles.num_prev} ></Link>
+                        <Link to='#' className={styles.on} >1</Link>
+                        <Link to='#' className={styles.num_next} ></Link>
+                        <Link to='#' className={styles.num_next_first} ></Link>
                      </div>
                 </div>
             </div>

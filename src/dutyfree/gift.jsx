@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import Footer from "../footer";
 import styles from './dutyfree.module.css';
 
@@ -19,11 +20,11 @@ function Gift(){
                         </div>
                         <div className={styles.top_list}>
                             <ul>
-                                <li><a href="#">인기순</a></li>
-                                <li><a href="#">신상품순</a></li>
-                                <li><a href="#">할인율</a></li>
-                                <li><a href="#">낮은가격순</a></li>
-                                <li><a href="#">높은가격순</a></li>
+                                <li>인기순</li>
+                                <li>신상품순</li>
+                                <li>할인율</li>
+                                <li>낮은가격순</li>
+                                <li>높은가격순</li>
                             </ul>
                             <select name="number">
                                 <option value="20개씩">20개씩</option>
@@ -38,13 +39,13 @@ function Gift(){
                         </div>   
                     </div>
                     <div className={styles.num}>
-                        <a className={styles.num_prev_first} href="#"></a>
-                        <a className={styles.num_prev} href="#"></a>
-                        <a className={styles.on} href="#">1</a>
-                        <a className={styles.add} href="#">2</a>
-                        <a className={styles.add} href="#">3</a>
-                        <a className={styles.num_next} href="#"></a>
-                        <a className={styles.num_next_first} href="#"></a>
+                        <Link to='#' className={styles.num_prev_first} ></Link>
+                        <Link to='#' className={styles.num_prev} ></Link>
+                        <Link to='#' className={styles.on} >1</Link>
+                        <Link to='#' className={styles.add} >2</Link>
+                        <Link to='#' className={styles.add} >3</Link>
+                        <Link to='#' className={styles.num_next} ></Link>
+                        <Link to='#' className={styles.num_next_first} ></Link>
                      </div>
                 </div>
             </div>

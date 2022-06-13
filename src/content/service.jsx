@@ -1,7 +1,8 @@
 import React from "react";
 import styles from "./contents.module.css";
 
-function Service({add}){
+function Service({add}){    
+
     return(
         <div style={{padding: '0 12px'}}>
             <div className={styles.content_box}>

@@ -59,7 +59,7 @@ function App() {
       </div>
     </div>
 
-      <div style={{width:'100%', height:'auto', background:'#ccc'}}>
+      <div >
         <Route path="/" exact={true} component={MainCom}/>
         <Route path="/dutyfree/dutyfree" component={Dutyfree}/>
         <Route path="/event/event" component={Event}/>

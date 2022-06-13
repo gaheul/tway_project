@@ -8,16 +8,14 @@ function Partners({list}){
     return(
         <div>
             <div style={{marginRight:'108px'}}>
-                <Link to='#'>
+                <Link to={list.src}>
                          <div className={styles.menu_item} >
                             <img src={list.img} alt="제휴서비스 이미지" />
                         </div>
                     <p className={styles.name}>{list.name}</p>   
                 </Link>
             </div>
-            <div>
-                <Route Route path="/dutyfree/dutyfree" component={Dutyfree}/>
-            </div>
+            
         </div>
     )
 }
@@ -28,15 +26,18 @@ function PartnerService(){
     const serviceList = [
         {
             img:'https://contents-image.twayair.com/homepage/images/main/ico_main_aff01.png',
-            name:'호텔'
+            name:'호텔',
+            src:'/community/community'
         },
         {
             img:'	https://contents-image.twayair.com/homepage/images/main/ico_main_aff02.png',
-            name:'렌터카'
+            name:'렌터카',
+            src:'/community/community/rent'
         },
         {
             img:'https://contents-image.twayair.com/homepage/images/main/ico_main_aff03.png',
-            name:'쇼핑 편의'
+            name:'쇼핑 편의',
+            
         },
         {
             img:'https://contents-image.twayair.com/homepage/images/main/ico_main_aff04.png',
@@ -44,11 +45,13 @@ function PartnerService(){
         },
         {
             img:'https://contents-image.twayair.com/homepage/images/main/ico_main_aff05.png',
-            name:'금융여행자보험'
+            name:'금융여행자보험',
+            src:'/community/community/bank'
         },
         {
             img:'https://contents-image.twayair.com/homepage/images/main/ico_main_aff06.png',
-            name:'와이파이'
+            name:'와이파이',
+            src:'/community/community/wifi'
         },
     ]
 

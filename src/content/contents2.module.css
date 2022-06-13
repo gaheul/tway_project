@@ -45,6 +45,10 @@
 
 }
 
+.menu_item:hover{
+    background-color: rgb(215, 35, 35);
+}
+
 .menu_item img{
     vertical-align: middle;
 }

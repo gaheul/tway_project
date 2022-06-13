@@ -8,7 +8,7 @@ function ItemList({items}){
     
 
     return(
-     <div>    
+     <div className={styles.item}>    
          <div className={styles.product}>
             <div className={styles.item_img}>
                 <div><img src={items.img} alt="" /></div>
@@ -24,7 +24,7 @@ function ItemList({items}){
                 <span>{items.exchage}</span>
             </div>
              <div className={styles.item_label}>
-                {items.label}
+             {items.label ? <Label/> : null}
             </div> 
          </div>
             
@@ -43,6 +43,7 @@ function ItemGift(){
             salePrice: '$372.00',
             price:'$186.00',
             exchage:'(₩238,000)',
+            label:true
             
         },
         {
@@ -60,7 +61,6 @@ function ItemGift(){
             salePrice: '$166.00',
             price:'$116.00',
             exchage:'(₩148,500)',
-            label:<Label/>
         },
         {
             img:'https://contents-image.twayair.com/contents/2020/0228/de8cfb62-2207-470d-b033-82bcf50ad3b0.jpg',
@@ -69,7 +69,6 @@ function ItemGift(){
             salePrice: '$79.00',
             price:'$55.00',
             exchage:'(₩70,500)',
-            label:<Label/>
         },
         {   
             img:'	https://contents-image.twayair.com/contents/2020/0228/3d0c3231-209f-4388-8d42-461cd9c7126f.jpg',
@@ -78,7 +77,6 @@ function ItemGift(){
             salePrice: '#59.00',
             price:'$41.00',
             exchage:'(₩52,500)',
-            label:<Label/>
         },
         {
             img:'https://contents-image.twayair.com/contents/2020/0109/1c1944ec-8393-4ab9-b814-1ee34cc8b6fe.jpg',
@@ -87,7 +85,6 @@ function ItemGift(){
             salePrice: '$129.00',
             price:'$90.00',
             exchage:'(₩115,500)',
-            label:<Label/>
         },
         {
             img:'https://contents-image.twayair.com/contents/2020/0108/7d47f7c6-c295-46b8-bb99-3b65917eee6d.jpg',

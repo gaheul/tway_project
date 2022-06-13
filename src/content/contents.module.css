@@ -36,6 +36,14 @@
     background-color: rgb(243, 243, 243);
     cursor: pointer;
     text-align: center;
+    transform: scaleY(0.95);
+}
+
+.content_box:hover{
+    background-color: rgb(211, 47, 47);
+
+    transition: transform 0.3s;
+    transform: scaleY(1.02);
 }
 
 
@@ -52,7 +60,7 @@
     margin-top: 20px;
     font-size: 15px;
     font-weight: 700;
-    padding: 0 50px;
+    padding: 5px 50px;
     text-align: center;
 
 }

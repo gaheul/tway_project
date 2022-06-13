@@ -5,10 +5,9 @@ import Label from "./label";
 
 
 function ItemList({items}){
-    
 
     return(
-     <div>    
+     <div className={styles.item}>    
          <div className={styles.product}>
             <div className={styles.item_img}>
                 <div><img src={items.img} alt="" /></div>
@@ -24,7 +23,7 @@ function ItemList({items}){
                 <span>{items.exchage}</span>
             </div>
              <div className={styles.item_label}>
-                {items.label}
+                {items.label ? <Label/> : null}
             </div> 
          </div>
             
@@ -43,6 +42,7 @@ function ItemDrink(){
             salePrice: '$394.00',
             price:'$335.00',
             exchage:'(₩419,000)',
+            label:true
             
         },
         {
@@ -60,7 +60,8 @@ function ItemDrink(){
             salePrice: '$136.00',
             price:'$116.00',
             exchage:'(₩148,500)',
-            label:<Label/>
+            label:true
+
         },
         {
             img:'https://contents-image.twayair.com/contents/2020/0106/2153472b-6fcb-42e2-ba29-89f6f9200aa7.jpg',
@@ -69,7 +70,7 @@ function ItemDrink(){
             salePrice: '$75.00',
             price:'$64.00',
             exchage:'(₩82,000)',
-            label:<Label/>
+            label:true
         },
         {   
             img:'https://contents-image.twayair.com/contents/2020/0109/778f15f4-a547-4c63-bc17-02a3ec935a32.jpg',
@@ -78,7 +79,8 @@ function ItemDrink(){
             salePrice: '#394.00',
             price:'$335.00',
             exchage:'(₩419,000)',
-            label:<Label/>
+            label:true
+
         },
         {
             img:'https://contents-image.twayair.com/contents/2020/0109/86f77242-9057-4573-af12-51b88a7ad1e7.jpg',
@@ -87,7 +89,8 @@ function ItemDrink(){
             salePrice: '$150.00',
             price:'$120.00',
             exchage:'(₩154,000)',
-            label:<Label/>
+            label:true
+
         },
         {
             img:'https://contents-image.twayair.com/contents/2020/0106/04ef50df-d2d6-4c2c-87d0-235ac0f6e56c.jpg',

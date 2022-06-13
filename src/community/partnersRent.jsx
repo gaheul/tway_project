@@ -10,7 +10,7 @@ function Partner({infoList}){
                             <img src={infoList.img} alt=""></img>
                         </div>
                        <strong>{infoList.name}</strong>
-                       <p  style={{padding:"0 85px"}}>{infoList.con}</p>
+                       <p  style={{padding:"0 80px"}}>{infoList.con}</p>
                        <button>{infoList.name}바로가기</button> 
                     </div>
         </div>

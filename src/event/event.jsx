@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../footer";
 import styles from "./event.module.css"
 import EventItem from "./eventList";
-import EventList from "./eventList";
+
 
 function Event(){
     return(
@@ -20,7 +21,17 @@ function Event(){
                 <div className={styles.content_section}>            
                     <EventItem/>  
                 </div>
+                <div className={styles.event_num}>
+                     <div className={styles.num}>
+                        <Link to='#' className={styles.num_prev_first} ></Link>
+                        <Link to='#' className={styles.num_prev} ></Link>
+                        <Link to='#' className={styles.on} >1</Link>
+                        <Link to='#' className={styles.add} >2</Link>
+                        <Link to='#' className={styles.num_next} ></Link>
+                        <Link to='#' className={styles.num_next_first} ></Link>
+                     </div>
 
+                </div>
                 </div>
             </div>
             <Footer/>
