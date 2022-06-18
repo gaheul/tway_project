@@ -1,7 +1,14 @@
 import React from "react";
+import { useState } from "react";
 import styles from './footer.module.css';
 
 function Footer(){
+
+    function onclick(e){
+        
+        console.log('클릭')
+        e.target.sytle.display = 'block';
+    }
     return(
             <div className={styles.footer}>
                 <div className={styles.header}>
@@ -10,6 +17,19 @@ function Footer(){
                             <span className={styles.book_title}>티웨이항공 예약센터</span>
                             <span className={styles.book_tel} >1688 - 8686</span>
                             <span className={styles.book_time}>07:00 ~ 19:00</span>
+                        </div>
+                        <div className={styles.connect_site}>
+                            <a onclick={onclick}>Family site</a>
+                            <ul className={styles.site_list}>
+                                <li>항공훈련센터</li>
+                                <li>예림당</li>
+                                <li>예림교육</li>
+                                <li>스마트베어</li>
+                                <li>와이슈타인</li>
+                                <li>예림디지털</li>
+                                <li>티웨이홀딩스</li>
+                                <li>해여림빌리지</li>
+                            </ul>
                         </div>
                     </div>
                 </div>

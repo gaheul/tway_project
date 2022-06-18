@@ -1,23 +1,44 @@
 import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./item.module.css";
 import Label from "./label";
 
 
 
-function ItemList({items}){
+function ItemList({items,best,hot}){
+    Label.defaultProps = {
+        best:'BEST',
+        hot:"HOT"
+    }
+
+    // const handleMouseEnter = e => {
+    //     e.target.st = "itemimg"
+    //   }
+    //   const handleMouseLeave = e => {
+    //     e.target.className = "product"
+    //   }
+    // onMouseEnter={onToggle}>{open ? <span>off</span> : <span>on</span> }
+    const [open, setOpen] = useState(false)
+    const [opens, setOpens] = useState(false)
+
+    const onBasket = () => setOpen(!open);
+    const onShop = () => setOpens(!opens);
 
     return(
      <div className={styles.item}>    
-         <div className={styles.product}>
+         <div className={styles.product} >
             <div className={styles.item_img}>
                 <div><img src={items.img} alt="" /></div>
             </div>
-            <div className={styles.item_name}>
-                <p className={styles.brand}>{items.brand}</p>
-                <strong className={styles.name}>{items.name}</strong>
+            {/* <div className={styles.item_box}> */}
+                <div className={styles.item_name}>
+                    <p className={styles.brand}>{items.brand}</p>
+                    <strong className={styles.name}>{items.name}</strong>
+                </div>
                 
-            </div>
-            <div className={styles.item_price}>
+                {/* </div> */}
+            <div className={styles.item_price} >
                 <del>{items.salePrice}</del>
                 <strong>{items.price}</strong>
                 <span>{items.exchage}</span>
@@ -25,9 +46,17 @@ function ItemList({items}){
              <div className={styles.item_label}>
                 {items.label ? <Label/> : null}
             </div> 
-         </div>
-            
+            <div className={styles.item_link} >
+                <Link className={styles.basket}  onMouseEnter={onBasket} onMouseLeave={onBasket} >                   
+                    {open ? <div className={styles.basket_text}>장바구니</div> : <div className={styles.basket_img}></div>}
+                </Link>
+                <Link className={styles.shop} onMouseEnter={onShop} onMouseLeave={onShop}>
+                {opens ? <div className={styles.shop_text}>주문하기</div> : <div className={styles.shop_img}></div>}
+                </Link>
+            </div>
         </div>
+            
+    </div>
     )
 
 }

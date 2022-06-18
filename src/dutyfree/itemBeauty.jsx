@@ -1,11 +1,22 @@
 import React from "react";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import styles from "./item.module.css";
 import Label from "./label";
 
 
 
-function ItemList({items}){
-    
+function ItemList({items,best,hot}){
+    Label.defaultProps = {
+        best:'BEST',
+        hot:"NEW"
+    }
+
+    const [open, setOpen] = useState(false)
+    const [opens, setOpens] = useState(false)
+
+    const onBasket = () => setOpen(!open);
+    const onShop = () => setOpens(!opens);
 
     return(
      <div className={styles.item}>    
@@ -13,19 +24,27 @@ function ItemList({items}){
             <div className={styles.item_img}>
                 <div><img src={items.img} alt="" /></div>
             </div>
-            <div className={styles.item_name}>
-                <p className={styles.brand}>{items.brand}</p>
-                <strong className={styles.name}>{items.name}</strong>
-                
-            </div>
+
+                <div className={styles.item_name}>
+                    <p className={styles.brand}>{items.brand}</p>
+                    <strong className={styles.name}>{items.name}</strong>
+                </div>
             <div className={styles.item_price}>
                 <del>{items.salePrice}</del>
                 <strong>{items.price}</strong>
                 <span>{items.exchage}</span>
             </div>
              <div className={styles.item_label}>
-                {items.label}
+             {items.label ? <Label/> : null}
             </div> 
+            <div className={styles.item_link} >
+                <Link className={styles.basket}  onMouseEnter={onBasket} onMouseLeave={onBasket} >                   
+                    {open ? <div className={styles.basket_text}>장바구니</div> : <div className={styles.basket_img}></div>}
+                </Link>
+                <Link className={styles.shop} onMouseEnter={onShop} onMouseLeave={onShop}>
+                    {opens ? <div className={styles.shop_text}>주문하기</div> : <div className={styles.shop_img}></div>}
+                </Link>
+            </div>
          </div>
             
         </div>
@@ -60,7 +79,7 @@ function ItemBeauty(){
             salePrice: '$31.00',
             price:'$29.00',
             exchage:'(₩37,500)',
-            label:<Label/>
+            label:true
         },
         {
             img:'https://contents-image.twayair.com/contents/2020/0109/84424e65-f3e6-46d4-9740-aff8b7101b04.jpg',
@@ -69,7 +88,7 @@ function ItemBeauty(){
             salePrice: '$59.00',
             price:'$47.00',
             exchage:'(₩60,500)',
-            label:<Label/>
+            label:true
         },
         {   
             img:'	https://contents-image.twayair.com/contents/2020/0109/ac1698b9-e223-47be-b8b6-4f040b262257.jpg',
@@ -78,7 +97,7 @@ function ItemBeauty(){
             salePrice: '$60.00',
             price:'$42.00',
             exchage:'(₩54,000)',
-            label:<Label/>
+            label:true
         },
         {
             img:'https://contents-image.twayair.com/contents/2022/0516/7fa7df75-6b10-4523-b8b7-ba88f570f668.jpg',
@@ -87,7 +106,7 @@ function ItemBeauty(){
             salePrice: '$32.00',
             price:'$29.00',
             exchage:'(₩37,500)',
-            label:<Label/>
+            label:true
         },
         {
             img:'	https://contents-image.twayair.com/contents/2022/0516/26c8dee8-633d-43ab-824c-392188715ce4.jpg',

@@ -43,6 +43,7 @@
 .product{
     padding-top: 27px;
     height: 100%;
+    cursor: pointer;
 }
 
 .product::before{
@@ -79,6 +80,77 @@
     transition: height 0.5s ease-out;
 }
 
+.item_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 22px 10px 14px 10px;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+}
+
+.item_link{
+    position: absolute;
+    top: 203px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-top: 10px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    transition: all 200ms ease 0s;
+    opacity: 0;
+   
+}
+
+
+.shop,
+.basket{
+    display: inline-block;
+    margin: 0 5px;
+    vertical-align: top;
+}
+
+.basket_img{
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background: url('./images/dutyfree_basket.png') no-repeat 50% 50% #7d756d;
+}
+
+.shop_img{
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background: url('./images/dutyfree_shop.png') no-repeat 50% 50% #d22c26;
+}
+
+.basket_text,
+.shop_text{
+    padding: 10px;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.2;
+    background-color: #7d756d;
+}
+
+.shop_text{
+    background-color: #d22c26;
+}
+
+.product:hover .item_name{
+   opacity: 0;
+}
+
+.product:hover .item_link{
+    opacity: 1;
+}
 
 
 .item_img div{
@@ -94,14 +166,12 @@
 }
 
 .item_name{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 70px;
     padding: 22px 10px 14px 10px;
-
+    margin-bottom: 8px;
+    width: 100%;
+    min-height: 70px;
+    text-align: center;
+   
     box-sizing: border-box;
 
 }
@@ -117,13 +187,10 @@
 }
 
 .item_price{
-    width: 100%;
-    height: 45px;
-
-
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .item_price del{
@@ -181,4 +248,5 @@
     border: 1px solid #d22c26;
     color: #d22c26;
 }
+
 

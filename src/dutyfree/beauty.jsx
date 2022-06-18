@@ -7,6 +7,7 @@ import ItemBeauty from "./itemBeauty";
 import Num from "./num";
 
 function Beauty(){
+    
     return(
         <div >
             <div className={styles.content}>
