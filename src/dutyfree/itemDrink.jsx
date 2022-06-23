@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import styles from "./item.module.css";
 import Label from "./label";
 
-
-
 function ItemList({items,best,hot}){
     Label.defaultProps = {
         best:'BEST',
@@ -24,6 +22,8 @@ function ItemList({items,best,hot}){
 
     const onBasket = () => setOpen(!open);
     const onShop = () => setOpens(!opens);
+
+
 
     return(
      <div className={styles.item}>    
@@ -53,6 +53,7 @@ function ItemList({items,best,hot}){
                 <Link className={styles.shop} onMouseEnter={onShop} onMouseLeave={onShop}>
                 {opens ? <div className={styles.shop_text}>주문하기</div> : <div className={styles.shop_img}></div>}
                 </Link>
+                
             </div>
         </div>
             

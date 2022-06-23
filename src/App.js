@@ -8,6 +8,7 @@ import Community from './community/community';
 import { FiUser,FiAlignRight} from "react-icons/fi";
 import { HiSearch } from "react-icons/hi";
 import Comunuties from './community/communities';
+
 //yarn add react-router-dom@5
 //아이콘 : yarn add react-icons
 //yarn add styled-components
@@ -15,18 +16,18 @@ import Comunuties from './community/communities';
 //yarn add slick-carousel
 
 function App() {
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const updateScroll = () => {
-  //     setScrollPosition(window.scrollY || document.documentElement.scrollTop);
-  // }
-  // useEffect(()=>{
-  //     window.addEventListener('scroll', updateScroll);
-  // });
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const updateScroll = () => {
+      setScrollPosition(window.scrollY || document.documentElement.scrollTop);
+  }
+  useEffect(()=>{
+      window.addEventListener('scroll', updateScroll);
+  });
 
   return (
     <div>
-    {/* <div className={scrollPosition < 100 ? "original_header" : "change_header"}> */}
-    <div className='header'>
+    <div className={scrollPosition < 100 ? "original_header" : "change_header"}>
+
       <div className='header_in'>
         <div className='logo'><Link to='/'><img src={require('./images/logo-1.png')}></img></Link></div>
         <div className='nav'>
@@ -65,7 +66,8 @@ function App() {
         <Route path="/event/event" component={Event}/>
         <Route path="/community/community" component={Community}/>
       </div>
-      </div>
+    </div>
+
   );
 }
 

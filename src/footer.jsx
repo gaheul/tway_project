@@ -2,13 +2,20 @@ import React from "react";
 import { useState } from "react";
 import styles from './footer.module.css';
 
+import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+
 function Footer(){
 
-    function onclick(e){
-        
-        console.log('클릭')
-        e.target.sytle.display = 'block';
-    }
+    // constructor (props) {
+    //     super(props);
+    //     this.state = {
+    //       dropdownOpen: false
+    //     }
+    //   }
+
+    //   toggle = (e) => {
+    //     this.setState({ dropdownOpen: !this.state.dropdownOpen });
+    //   }
     return(
             <div className={styles.footer}>
                 <div className={styles.header}>
@@ -31,6 +38,17 @@ function Footer(){
                                 <li>해여림빌리지</li>
                             </ul>
                         </div>
+                        {/* <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+      <DropdownToggle caret>버튼 Dropdown</DropdownToggle>
+      <DropdownMenu>
+        <DropdownItem header>헤더</DropdownItem>
+        <DropdownItem disabled>비활성화 버튼</DropdownItem>
+        <a href="http://example.com/">
+          <DropdownItem>example 사이트로 이동</DropdownItem>
+        </a>
+        <DropdownItem onClick={e => alert("Alert 버튼")}>Alert 버튼</DropdownItem>
+      </DropdownMenu>
+    </ButtonDropdown> */}
                     </div>
                 </div>
                 <div className={styles.section}>

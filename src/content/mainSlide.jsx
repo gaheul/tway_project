@@ -12,22 +12,17 @@ const Container = styled.div`
     position: absolute;
     top: 60%;
     left:20%;
-   
-
-
 `;
 
 
 const Wrapper = styled.div`
     width:100%
-    height:auto;
-
-        
+    height:auto;      
 `;
 
 const StyledSlider = styled(Slider)`
     .slick-slide div{
-      
+    
       width:100%;
       
       

@@ -35,24 +35,37 @@ const Wrap = styled.div`
 
 const StyledSlider = styled(Slider)`
     .slick-slide div{
+      position: relative;
       height:382px;
       padding-bottom:10px
       
     }
+    &::before{  
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 0;
+      background-color: #d22c26;
+    }
+    .&:hover::before{
+      width: 100%;
+      transition: width 0.5s ease-out;
+  }
+  
 `;
 
 const ImageContainer = styled.div`
+      
       width:282px;
       display: flex;
       justify-content: space-around;
       flex-direction: column;
       background-color: #fff;
 
- 
-
-
-  
-`;
+      `;
 
 const Image = styled.img`
 
@@ -177,7 +190,7 @@ export default class TravelSlider extends Component {
         <StyledSlider {...settings}>
           {items.map(item => {
             return (
-              <div key={item.id}> 
+              <div className={styles.div} key={item.id}> 
                 <ImageContainer>
                   <Image src={item.url} />
                   <i className={styles.icon}>편도총액</i>

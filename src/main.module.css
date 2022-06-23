@@ -5,6 +5,10 @@
     background: url('./images/main.jpg');
 }
 
+.mainImg.scroll {
+    margin-top: 85px;
+}
+
 .contents{
     margin: 0 auto;
     width: 100%;
