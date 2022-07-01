@@ -22,12 +22,17 @@
 }
 
 .content_menu{
-
     height:245px;
     margin-top: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+
+.content_item {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 
 .content_box{
@@ -36,14 +41,15 @@
     background-color: rgb(243, 243, 243);
     cursor: pointer;
     text-align: center;
-    transform: scaleY(0.95);
+    transition: 300ms;
 }
 
 .content_box:hover{
+    height: 220px;
+    border: 1px solid white;
     background-color: rgb(211, 47, 47);
-
-    transition: transform 0.3s;
-    transform: scaleY(1.02);
+    box-shadow: 0px 0px 8px 1px rgb(0 0 0 / 44%);
+    transition: 300ms;
 }
 
 
@@ -60,7 +66,7 @@
     margin-top: 20px;
     font-size: 15px;
     font-weight: 700;
-    padding: 5px 50px;
+    padding: 5px 0 0;
     text-align: center;
-
+    white-space: pre-line;
 }
