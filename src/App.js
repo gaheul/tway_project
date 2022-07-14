@@ -27,7 +27,6 @@ function App() {
   return (
     <div>
     <div className={scrollPosition < 100 ? "original_header" : "change_header"}>
-
       <div className='header_in'>
         <div className='logo'><Link to='/'><img src={require('./images/logo-1.png')}></img></Link></div>
         <div className='nav'>
@@ -59,8 +58,7 @@ function App() {
         </div>
       </div>
     </div>
-
-      <div >
+   <div >
         <Route path="/" exact={true} component={MainCom}/>
         <Route path="/dutyfree/dutyfree" component={Dutyfree}/>
         <Route path="/event/event" component={Event}/>

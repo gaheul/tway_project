@@ -11,6 +11,19 @@ function Event(){
             <div className={styles.content}>
                 <div className={styles.content_box}>
                 <div className={styles.content_header}>
+                    <div className={styles.event_content_go}>
+                        <ul className={styles.event_go}>
+                            <li>
+                                <Link className={styles.event_home}>HOME</Link>
+                            </li>
+                            <li>
+                                <Link className={`${styles.event_home} ${styles.event_con}`}>이벤트</Link>
+                            </li>
+                            <li>
+                                <Link className={`${styles.event_home} ${styles.event_con}`}>이벤트/프로모션</Link>
+                            </li>
+                        </ul>
+                    </div>
                     <div className={styles.content_title}>
                         <h3>이벤트</h3>
                     </div>

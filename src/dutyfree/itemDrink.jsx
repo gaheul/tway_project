@@ -10,13 +10,6 @@ function ItemList({items,best,hot}){
         hot:"HOT"
     }
 
-    // const handleMouseEnter = e => {
-    //     e.target.st = "itemimg"
-    //   }
-    //   const handleMouseLeave = e => {
-    //     e.target.className = "product"
-    //   }
-    // onMouseEnter={onToggle}>{open ? <span>off</span> : <span>on</span> }
     const [open, setOpen] = useState(false)
     const [opens, setOpens] = useState(false)
 

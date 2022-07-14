@@ -69,9 +69,10 @@
     top:200px;
     padding: 60px 30px 30px 30px;
     box-sizing: border-box;
-    background-color: white;
+
     border-radius: 18px;
     box-sizing: border-box;
+    background: white url('./images/book_logo.png') no-repeat 0 0;
 }
 
 .book{
@@ -82,33 +83,66 @@
 
 .book_section{
     min-width: 23%;
-    
-    
 }
 
-.book_section ul{
+.book_section > ul {
     display: flex;
-    justify-content: flex-start;
     align-items: flex-start;
-    
+    border-radius: 25px;
 }
 
-.book_section ul li:first-child a{
-    border-radius: 25px 0px 0px 25px;
-    
+.book_section > ul > li {
+    background-color: rgb(242, 246, 249);
+    cursor: pointer;
 }
 
-.book_section ul li:last-child a{
-    border-radius: 0px 25px 25px 0px;
-    
-}
-
-.book_section ul li a{
+.book_section > ul > li > button {
+    min-width: 60px;
+    min-height: 30px;
     font-size: 14px;
     padding: 8px 20px;
-    background-color: rgb(242, 246, 249);   
-    
+    border: none;
+    background-color: rgb(242, 246, 249);
+    pointer-events: none;
 }
+
+.book_section > ul > li > button > label {
+    pointer-events: none;
+}
+
+.book_section > ul > li:first-child,
+.book_section > ul > li:first-child > button {
+    border-radius: 25px 0px 0px 25px;
+}
+
+
+.book_section > ul > li > input {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    vertical-align: middle;
+    margin: 0px;
+    padding: 0px;
+    color: rgb(49, 49, 49);
+    font-size: 14px;
+    line-height: 1.5;
+    pointer-events: none;
+}
+
+.book_section > ul > li > input:checked + button {
+    padding: 9px 19px;
+    border-radius: 25px !important;
+    background-color: rgb(210, 44, 38);
+    font-weight: 700;
+    color: white;
+}
+
+.book_section > ul > li:last-child,
+.book_section > ul > li:last-child > button{
+    border-radius: 0px 25px 25px 0px;
+}
+
 
 .check{
    min-width: 21%;
@@ -122,15 +156,16 @@
     padding: 0 32px 0 30px;
     color: rgb(80, 80, 80);
     position: relative;
-    
+    line-height: 34px;
 }
 
 .check_con span{
-    font-size: 20px;
-    margin: -11px 0 0;
     position: absolute;
     top:50%;
     left:0;
+    font-size: 30px;
+    margin: -15px 0 0;
+    cursor: pointer;
 }
 
 .code{
@@ -150,11 +185,21 @@
    font-size: 15px;
 }
 
-.code > a {
-    position: absolute;
-    top: 5px;
-    right: 8px;
+.code > span {
+    position: relative;
     font-size: 20px;
+}
+
+.code_title{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.code_txt {
+    padding-top: 30px;
+    color: rgb(77, 77, 77);
+    font-size: 15px;
+    line-height: 24px;
 }
 
 .section{
@@ -166,6 +211,7 @@
 }
 
 .book_location{
+    position: relative;
     margin-left: 15px;
     width: 240px;
 }
@@ -183,6 +229,34 @@
     outline: none;
     font-size: 16px;
     background-color: rgb(242, 246, 249);
+    
+}
+
+.departure {
+    position: absolute;
+    top: 30%;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    background: url('./images/main_departure.png') no-repeat 50% 50%;
+}
+
+.date_img {
+    position: absolute;
+    top: 30%;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background: url('./images/main_date.png') no-repeat 50% 50%;
+}
+
+.passenger_img {
+    position: absolute;
+    top: 30%;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background: url('./images/main_people.png') no-repeat 50% 50%;
 }
 
 .book_date{
@@ -229,5 +303,7 @@
     color: #fff;
 }
 
-
+.code_msg{
+    position: relative;
+}
 

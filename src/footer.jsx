@@ -1,21 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import styles from './footer.module.css';
 
-import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 function Footer(){
 
-    // constructor (props) {
-    //     super(props);
-    //     this.state = {
-    //       dropdownOpen: false
-    //     }
-    //   }
 
-    //   toggle = (e) => {
-    //     this.setState({ dropdownOpen: !this.state.dropdownOpen });
-    //   }
     return(
             <div className={styles.footer}>
                 <div className={styles.header}>
@@ -26,29 +15,18 @@ function Footer(){
                             <span className={styles.book_time}>07:00 ~ 19:00</span>
                         </div>
                         <div className={styles.connect_site}>
-                            <a onclick={onclick}>Family site</a>
-                            <ul className={styles.site_list}>
-                                <li>항공훈련센터</li>
-                                <li>예림당</li>
-                                <li>예림교육</li>
-                                <li>스마트베어</li>
-                                <li>와이슈타인</li>
-                                <li>예림디지털</li>
-                                <li>티웨이홀딩스</li>
-                                <li>해여림빌리지</li>
-                            </ul>
+                            <select>
+                                <option className={styles.hidden}>Family site</option>
+                                <option>항공훈련센터</option>
+                                <option>예림당</option>
+                                <option>예림교육</option>
+                                <option>스마트베어</option>
+                                <option>와이슈타인</option>
+                                <option>예림디지털</option>
+                                <option>티웨이홀딩스</option>
+                                <option>해여림빌리지</option>
+                            </select>
                         </div>
-                        {/* <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-      <DropdownToggle caret>버튼 Dropdown</DropdownToggle>
-      <DropdownMenu>
-        <DropdownItem header>헤더</DropdownItem>
-        <DropdownItem disabled>비활성화 버튼</DropdownItem>
-        <a href="http://example.com/">
-          <DropdownItem>example 사이트로 이동</DropdownItem>
-        </a>
-        <DropdownItem onClick={e => alert("Alert 버튼")}>Alert 버튼</DropdownItem>
-      </DropdownMenu>
-    </ButtonDropdown> */}
                     </div>
                 </div>
                 <div className={styles.section}>

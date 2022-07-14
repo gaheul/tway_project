@@ -5,11 +5,9 @@ import Contents from "./content/contents";
 import styles from './main.module.css';
 
 function MainCom(){
-
-
     return(
-        <div>
-            <div className={styles.mainImg}>
+        <div>  
+            <div className={styles.mainImg}> 
                 <div className={styles.mainImg}>
                     <MainContent/>
                 </div>

@@ -10,14 +10,13 @@ import Hotel from "./hotel";
 function Community(){
     return(
         <div>
-            
             <div className={styles.header}>
                     <div className={styles.header_in}>
                     <ul>
-                        <li><Link to='/community/community'>호텔</Link></li>
-                        <li><Link to='/community/community/rent'>렌터카</Link></li>
-                        <li><Link to='/community/community/bank'>금융및여행보험</Link></li>
-                        <li><Link to='/community/community/wifi'>와이파이</Link></li>
+                        <li><Link className={styles.list_name} to='/community/community'>호텔</Link></li>
+                        <li><Link className={styles.list_name} to='/community/community/rent'>렌터카</Link></li>
+                        <li><Link className={styles.list_name} to='/community/community/bank'>금융및여행보험</Link></li>
+                        <li><Link className={styles.list_name} to='/community/community/wifi'>와이파이</Link></li>
                     </ul>
             </div>
             </div>

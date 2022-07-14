@@ -6,6 +6,7 @@ import styled, { createGlobalStyle } from 'styled-components';
 import styles from "./travel.module.css";
 
 
+
 const Global = createGlobalStyle`
   .slick-slide {
 	  margin:50px auto;
