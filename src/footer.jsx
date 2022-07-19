@@ -110,9 +110,9 @@ function Footer(){
                                 <span>통신판매업신고번호. 2017-서울강서-1292</span>
                                 <span>개인정보 관리책임자. 경영본부장 김형이</span>
                             </p>
-                            <copyright style={{fontSize:'12px',color:'#1a1a1a'}}>
+                            <p style={{fontSize:'12px',color:'#1a1a1a'}}>
                                 Copyright ⓒ 2019 t’way Air. All Rights Reserved.
-                            </copyright>
+                            </p>
                         </address>
                         <div className={styles.info_security}>
                             <img className={styles.security_web} src={require('./images/footer_web.png')}   alt="" />

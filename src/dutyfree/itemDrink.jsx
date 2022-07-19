@@ -208,8 +208,8 @@ function ItemDrink(){
 
     return(
        <div>  
-           {itemLists.map(items => (
-               <ItemList  items={items} key={items.brand}/>
+           {itemLists.map(drink => (
+               <ItemList  items={drink} key={drink.name}/>
            ))}
        </div>
        

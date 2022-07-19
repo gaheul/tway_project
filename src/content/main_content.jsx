@@ -86,13 +86,13 @@ function MainContent(){
                                 <li onClick={selectFlightMethod}>
                                     <input type="radio" id="round" name="flight_method" />
                                     <button type="button">
-                                        <label for="round">왕복</label>
+                                        <label for="round">편도</label>
                                     </button>
                                 </li>
                                 <li onClick={selectFlightMethod}>
                                     <input type="radio" id="round" name="flight_method" />
                                     <button type="button">
-                                        <label for="round">왕복</label>
+                                        <label for="round">다구간</label>
                                     </button>
                                 </li>
                             </ul>

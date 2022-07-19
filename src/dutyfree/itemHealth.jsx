@@ -104,8 +104,8 @@ function ItemHealth(){
 
     return(
        <div>  
-           {itemLists.map(items => (
-               <ItemList  items={items} key={items.brand}/>
+           {itemLists.map(health => (
+               <ItemList  items={health} key={health.id}/>
            ))}
        </div>
        

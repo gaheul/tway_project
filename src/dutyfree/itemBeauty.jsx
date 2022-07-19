@@ -137,8 +137,8 @@ function ItemBeauty(){
 
     return(
        <div>  
-           {itemLists.map(items => (
-               <ItemList  items={items} key={items.brand}/>
+           {itemLists.map(beauty => (
+               <ItemList  items={beauty} key={beauty.name}/>
            ))}
        </div>
        

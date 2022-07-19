@@ -221,8 +221,8 @@ function ItemGift(){
 
     return(
        <div>  
-           {itemLists.map(items => (
-               <ItemList  items={items} key={items.brand}/>
+           {itemLists.map(gift => (
+               <ItemList  items={gift} key={gift.img}/>
            ))}
        </div>
        

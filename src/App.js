@@ -31,9 +31,9 @@ function App() {
         <div className='logo'><Link to='/'><img src={require('./images/logo-1.png')}></img></Link></div>
         <div className='nav'>
           <ul>
-            <li><Link to='/' className='nav-list'>항공권예매</Link></li>
-            <li><Link to='/'className='nav-list'>나의 예약</Link></li>
-            <li><Link to='/'className='nav-list'>서비스 안내</Link></li>
+            <li className='nav-list'>항공권예매</li>
+            <li className='nav-list'>나의 예약</li>
+            <li className='nav-list'>서비스 안내</li>
             <li><Link to='/dutyfree/dutyfree'className='nav-list'>온라인면세점</Link></li>
             <li><Link to='/event/event'className='nav-list'>이벤트</Link></li>
             <li><Link to='/community/community'className='nav-list'>제휴</Link></li>

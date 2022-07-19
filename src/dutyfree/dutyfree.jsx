@@ -8,7 +8,11 @@ import Gift from "./gift";
 import Beauty from "./beauty";
 import Drink from "./drink";
 
-function Dutyfree(){
+function Dutyfree() {
+    const current_text = window.location.pathname.includes("health") ? "건강제품" :
+                         window.location.pathname.includes("gift") ? "쥬얼리&선물용품" :
+                         window.location.pathname.includes("beauty") ? "화장품&향수" : "주류";
+
     return(
         <div>
             <div className={styles.header}>
@@ -27,6 +31,22 @@ function Dutyfree(){
                     </ul>
                 </div>
             </div>
+            <div className={`${styles.add_content_go} ${styles.content_go_list}`}>
+                <ul className={styles.add_button}>
+                    <li>
+                        <Link className={styles.add_home}>HOME</Link>
+                    </li>
+                    <li>
+                        <Link className={`${styles.add_home} ${styles.add_con}`}>이벤트</Link>
+                    </li>
+                    <li>
+                        <Link className={`${styles.add_home} ${styles.add_con}`}>이벤트/프로모션</Link>
+                    </li>
+                    <li>
+                        <Link className={`${styles.add_home} ${styles.add_con}`}>{current_text}</Link>
+                    </li>
+                </ul>
+            </div>
             <div style={{width:'100%', height:'auto', background:'#fff'}}>
                 <Route path="/dutyfree/dutyfree" exact={true} component={Drink}/>
                 <Route path="/dutyfree/dutyfree/health" component={Health}/>
@@ -34,6 +54,7 @@ function Dutyfree(){
                 <Route path="/dutyfree/dutyfree/beauty" component={Beauty}/>
                 
             </div>
+            
            <Footer/>
         </div>
     )

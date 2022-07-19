@@ -56,6 +56,41 @@
     text-align: center;
 }
 
+.add_content_go {
+    padding-top: 15px;
+}
+
+.content_go_list {
+    margin: 0 auto;
+    width: 1200px;
+}  
+
+.add_button {
+    display: flex;
+
+}
+
+.add_button li {
+    background: url('./images/event_arrow.png') no-repeat 0 50%;
+    margin-left: 20px;
+}
+
+.add_button li:first-child {
+    background: none;
+}
+
+.add_home {
+    font-size: 14px;
+    color: rgb(77, 77, 77);
+    background: url('./images/event_home.png') no-repeat 0 50%;
+    padding-left: 20px;
+}
+
+.add_con{
+    padding-right: 27px;
+    background: url('./images/event_add.png') no-repeat 99.5% 50%;
+}
+
 .con_sale{
     width: 100%;
     margin-bottom: 25px;
