@@ -34,16 +34,16 @@ function Dutyfree() {
             <div className={`${styles.add_content_go} ${styles.content_go_list}`}>
                 <ul className={styles.add_button}>
                     <li>
-                        <Link className={styles.add_home}>HOME</Link>
+                        <div className={styles.add_home}>HOME</div>
                     </li>
                     <li>
-                        <Link className={`${styles.add_home} ${styles.add_con}`}>이벤트</Link>
+                        <div className={`${styles.add_home} ${styles.add_con}`}>온라인면세점</div>
                     </li>
                     <li>
-                        <Link className={`${styles.add_home} ${styles.add_con}`}>이벤트/프로모션</Link>
+                        <div className={`${styles.add_home} ${styles.add_con}`}>카테고리</div>
                     </li>
                     <li>
-                        <Link className={`${styles.add_home} ${styles.add_con}`}>{current_text}</Link>
+                        <div className={`${styles.add_home} ${styles.add_con}`}>{current_text}</div>
                     </li>
                 </ul>
             </div>

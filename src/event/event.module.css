@@ -51,6 +51,22 @@
     background: url('./images/event_add.png') no-repeat 99.5% 50%;
 }
 
+.event_box {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    padding: 20px 0;
+    width: 250px;
+    height: 237px;
+    border: 1px solid #ccc;
+    z-index: 5;
+    background-color: #fff;
+}
+
+.event_box > ul > li {
+    margin-bottom: 15px;
+}
+
 .content_title{
     display: flex;
     justify-content: center;
