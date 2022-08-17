@@ -59,13 +59,12 @@ const StyledSlider = styled(Slider)`
 `;
 
 const ImageContainer = styled.div`
-      
       width:282px;
       display: flex;
       justify-content: space-around;
       flex-direction: column;
       background-color: #fff;
-
+      
       `;
 
 const Image = styled.img`

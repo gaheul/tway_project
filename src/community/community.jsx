@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route,Link } from "react-router-dom";
 import Footer from "../footer";
 import styles from "./community.module.css"
@@ -13,6 +13,9 @@ function Community(){
                          window.location.pathname.includes("bank") ? "금융및여행보험" :
                          window.location.pathname.includes("wifi") ? "와이파이" : "호텔";
 
+                         const [open, setOpen] = useState(false);
+
+                         const onEvent = () => setOpen(!open);
     return(
         <div>
             <div className={styles.header}>
@@ -28,13 +31,25 @@ function Community(){
             <div className={`${styles.add_content_go} ${styles.content_go_list}`}>
                 <ul className={styles.add_button}>
                     <li>
-                        <Link className={styles.add_home}>HOME</Link>
+                        <div className={styles.add_home}>HOME</div>
                     </li>
                     <li>
-                        <Link className={`${styles.add_home} ${styles.add_con}`}>제휴</Link>
+                        <div className={`${styles.add_home} ${styles.add_con}`} onMouseEnter={onEvent} onMouseLeave={onEvent} >제휴</div>
+                        {open ? 
+                            <div className={styles.event_box}>
+                                <ul>
+                                    <li>항공권예매</li>
+                                    <li>나의예약</li>
+                                    <li>서비스안내</li>
+                                    <li>온라인면세점</li>
+                                    <li>이벤트</li>
+                                    <li>제휴</li>
+                                </ul>
+                            </div> : 
+                        ""}
                     </li>
                     <li>
-                        <Link className={`${styles.add_home} ${styles.add_con}`}>{current_text}</Link>
+                        <div className={`${styles.add_home} ${styles.add_con}`}>{current_text}</div>
                     </li>
                 </ul>
             </div>

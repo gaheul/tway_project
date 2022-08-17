@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route,Link } from "react-router-dom";
 import styles from './dutyfree.module.css';
 import Footer from "../footer";
@@ -12,6 +12,10 @@ function Dutyfree() {
     const current_text = window.location.pathname.includes("health") ? "건강제품" :
                          window.location.pathname.includes("gift") ? "쥬얼리&선물용품" :
                          window.location.pathname.includes("beauty") ? "화장품&향수" : "주류";
+    
+    const [open, setOpen] = useState(false);
+
+    const onEvent = () => setOpen(!open);
 
     return(
         <div>
@@ -37,7 +41,19 @@ function Dutyfree() {
                         <div className={styles.add_home}>HOME</div>
                     </li>
                     <li>
-                        <div className={`${styles.add_home} ${styles.add_con}`}>온라인면세점</div>
+                        <div className={`${styles.add_home} ${styles.add_con}`} onMouseEnter={onEvent} onMouseLeave={onEvent} >온라인면세점</div>
+                        {open ? 
+                            <div className={styles.event_box}>
+                                <ul>
+                                    <li>항공권예매</li>
+                                    <li>나의예약</li>
+                                    <li>서비스안내</li>
+                                    <li>온라인면세점</li>
+                                    <li>이벤트</li>
+                                    <li>제휴</li>
+                                </ul>
+                            </div> : 
+                        ""}
                     </li>
                     <li>
                         <div className={`${styles.add_home} ${styles.add_con}`}>카테고리</div>
